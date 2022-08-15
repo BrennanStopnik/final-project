@@ -2,12 +2,6 @@ body {
     margin-left: 150px;
 }
 
-/* for the items */
-/* font-family: 'Delius', cursive; */
-
-
-
-
 #title {
     font-family: 'Monoton', cursive;
     font-size: 64px;
@@ -46,4 +40,13 @@ body {
     margin-left: 5px;
     background-color: aqua;
     color: darkblue;
+}
+
+.items {
+    font-family: 'Delius', cursive;
+    color: darkblue;
+}
+
+.store-form {
+    padding-bottom: 25px;
 }

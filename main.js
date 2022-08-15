@@ -1,17 +1,18 @@
 let form1 = document.querySelector("#form1");
-let form2 = document.querySelector("#form2");
+let storesDiv = document.querySelector("#stores");
 let inputValue = document.querySelector("#store-input");
-let storeSubmit = document.querySelector("#store-submit");
 let storeList = document.querySelector("#ul");
 
 
 form1.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    let storeName = document.createElement("ul");
+    let newForm = document.createElement("form");
+    newForm.classList.add("store-form");
+
+    let storeName = document.createElement("label");
     storeName.innerText = inputValue.value;
     storeName.classList.add("store");
-    
 
     let storeInput = document.createElement("input");
     storeInput.setAttribute("type", "text");
@@ -22,34 +23,24 @@ form1.addEventListener('submit', function(e) {
     submitItem.setAttribute("id", "sub-btn");
     submitItem.setAttribute("value", "Add Item");
 
-    // let theItems = document.createElement("ul");
-    // // theItems.innerText = storeInput.value;
+    let theList = document.createElement("ul");
+    theList.setAttribute("id", "the-list");
 
+    storeList.appendChild(newForm);
+    newForm.appendChild(storeName);
+    newForm.appendChild(storeInput);
+    newForm.appendChild(submitItem);
+    newForm.appendChild(theList);
 
-    storeList.appendChild(storeName);
-    storeList.appendChild(storeInput);
-    storeList.appendChild(submitItem);
-
-    form2.addEventListener('submit', function(e) {
+    newForm.addEventListener('submit', function(e) {
         e.preventDefault();
         let listItems = document.createElement("li");
-        let checkbox = document.createElement("input");
-        checkbox.setAttribute("type", "checkbox");
         listItems.innerText = storeInput.value;
+        listItems.classList.add("items");
+        storeInput.innerText.value = '';
         
-        storeName.appendChild(listItems);
+        theList.appendChild(listItems);
     })
-
-
 
 });
 
-// form2.addEventListener('submit', function(e) {
-//     e.preventDefault();
-//     let listItems = document.createElement("li");
-//     let checkbox = document.createElement("input");
-//     checkbox.setAttribute("type", "checkbox");
-//     listItems.innerText = storeInput.value;
-    
-//     storeName.appendChild(listItems);
-// });
