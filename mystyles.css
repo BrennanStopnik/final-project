@@ -1,0 +1,49 @@
+body {
+    margin-left: 150px;
+}
+
+/* for the items */
+/* font-family: 'Delius', cursive; */
+
+
+
+
+#title {
+    font-family: 'Monoton', cursive;
+    font-size: 64px;
+    color: blue;
+}
+
+#store-label {
+    color: blue;
+    font-size: large;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.store {
+    margin-right: 5px;
+    color: blue;
+    font-family: 'Playfair Display SC', serif;
+}
+
+#store-input {
+    background-color: yellow;
+    color: darkblue;
+    margin-bottom: 10px;
+}
+
+#store-submit {
+    background-color: aqua;
+    color: darkblue;
+}
+
+#item-box {
+    background-color: yellow;
+    color: darkblue;
+}
+
+#sub-btn {
+    margin-left: 5px;
+    background-color: aqua;
+    color: darkblue;
+}
