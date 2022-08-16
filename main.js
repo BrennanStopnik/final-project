@@ -29,6 +29,7 @@ form1.addEventListener('submit', function(e) {
     submitItem.setAttribute("id", "sub-btn");
     submitItem.setAttribute("value", "Add Item");
 
+    // Creating the button to remove all the items from a stores list
     let remover = document.createElement("input");
     remover.setAttribute("type", "submit");
     remover.setAttribute("id", "rem-btn");
@@ -38,8 +39,10 @@ form1.addEventListener('submit', function(e) {
     let theList = document.createElement("ul");
     theList.setAttribute("id", "the-list");
 
-    // Appending all the children to the HTML 
+    // Appending new form to the store list "ul"
     storeList.appendChild(newForm);
+
+    // Appending all the children to the new form created above 
     newForm.appendChild(storeName);
     newForm.appendChild(storeInput);
     newForm.appendChild(submitItem);
