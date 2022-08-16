@@ -31,15 +31,16 @@ form1.addEventListener('submit', function(e) {
     newForm.appendChild(storeInput);
     newForm.appendChild(submitItem);
     newForm.appendChild(theList);
+    inputValue.value = '';
 
     newForm.addEventListener('submit', function(e) {
         e.preventDefault();
         let listItems = document.createElement("li");
         listItems.innerText = storeInput.value;
         listItems.classList.add("items");
-        storeInput.innerText.value = '';
         
         theList.appendChild(listItems);
+        storeInput.value = '';
     })
 
 });

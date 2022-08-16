@@ -44,9 +44,13 @@ body {
 
 .items {
     font-family: 'Delius', cursive;
-    color: darkblue;
+    color: blue;
 }
 
 .store-form {
     padding-bottom: 25px;
+}
+
+#the-list {
+    padding-top: 15px;
 }
