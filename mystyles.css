@@ -42,6 +42,12 @@ body {
     color: darkblue;
 }
 
+#rem-btn {
+    margin-left: 5px;
+    background-color: aqua;
+    color: darkblue;
+}
+
 .items {
     font-family: 'Delius', cursive;
     color: blue;
