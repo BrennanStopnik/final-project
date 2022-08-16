@@ -1,5 +1,16 @@
-body {
+#div {
     margin-left: 150px;
+    
+}
+
+body {
+    background-color: beige;
+}
+
+img {
+    margin-left: 150px;
+    margin-bottom: -68px;
+    width: 525px;
 }
 
 #title {
@@ -23,7 +34,6 @@ body {
 #store-input {
     background-color: yellow;
     color: darkblue;
-    margin-bottom: 10px;
 }
 
 #store-submit {
@@ -42,21 +52,21 @@ body {
     color: darkblue;
 }
 
-#rem-btn {
-    margin-left: 5px;
-    background-color: aqua;
+.items {
+    font-family: 'Delius', cursive;
     color: darkblue;
 }
 
-.items {
-    font-family: 'Delius', cursive;
-    color: blue;
-}
-
 .store-form {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 
 #the-list {
     padding-top: 15px;
+}
+
+.clicks {
+    font-size: small;
+    margin-left: 100px;
+    color: darkblue;
 }

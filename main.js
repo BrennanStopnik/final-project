@@ -30,10 +30,10 @@ form1.addEventListener('submit', function(e) {
     submitItem.setAttribute("value", "Add Item");
 
     // Creating the button to remove all the items from a stores list
-    let remover = document.createElement("input");
-    remover.setAttribute("type", "submit");
-    remover.setAttribute("id", "rem-btn");
-    remover.setAttribute("value", "Remove Items");
+    // let remover = document.createElement("input");
+    // remover.setAttribute("type", "submit");
+    // remover.setAttribute("id", "rem-btn");
+    // remover.setAttribute("value", "Remove Items");
 
     // Creating a new "ul" element for the list items that are entered in each stores input field below
     let theList = document.createElement("ul");
@@ -46,7 +46,7 @@ form1.addEventListener('submit', function(e) {
     newForm.appendChild(storeName);
     newForm.appendChild(storeInput);
     newForm.appendChild(submitItem);
-    newForm.appendChild(remover);
+    // newForm.appendChild(remover);
     newForm.appendChild(theList);
 
     // Clearing the input field next to Store Name
@@ -61,10 +61,6 @@ form1.addEventListener('submit', function(e) {
         let listItems = document.createElement("li");
         listItems.innerText = storeInput.value;
         listItems.classList.add("items");
-
-        // Adding remove to each item
-        
-
         
         // Appending to the "ul" created above
         theList.appendChild(listItems);
@@ -75,16 +71,19 @@ form1.addEventListener('submit', function(e) {
         // Using querySelectorAll for each item in the list
         let eachItem = document.querySelectorAll("li");
 
-        // For loop to go through each item to "check it off the list"
-            // Went with color changing because I like the way it looks
+
+        // For loop to go through each item to "check it off the list". Went with color changing because I like the way it looks.
         for (let i = 0; i < eachItem.length; i++){
             eachItem[i].addEventListener('click', function(){
                 console.log(eachItem[i].innerText);
-                if (eachItem[i].style.color === 'blue'){
-                    eachItem[i].style.color = 'red';
+                if (eachItem[i].style.color === 'darkblue'){
+                    eachItem[i].style.color = 'pink';
                 } else {
-                    eachItem[i].style.color = 'blue'
+                    eachItem[i].style.color = 'darkblue'
                 }
+            })
+            eachItem[i].addEventListener('dblclick', function(){
+                eachItem[i].remove();
             })
         }
     })
