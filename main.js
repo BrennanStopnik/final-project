@@ -4,6 +4,7 @@ let form1 = document.querySelector("#form1");
 let storesDiv = document.querySelector("#stores");
 let inputValue = document.querySelector("#store-input");
 let storeList = document.querySelector("#ul");
+let removeStores = document.querySelector("#remove-form");
 
 // Adding an event listener to the "Store Name" input element to create the stores and the individual inputs and buttons.
 form1.addEventListener('submit', function(e) {
@@ -29,12 +30,6 @@ form1.addEventListener('submit', function(e) {
     submitItem.setAttribute("id", "sub-btn");
     submitItem.setAttribute("value", "Add Item");
 
-    // Creating the button to remove all the items from a stores list
-    // let remover = document.createElement("input");
-    // remover.setAttribute("type", "submit");
-    // remover.setAttribute("id", "rem-btn");
-    // remover.setAttribute("value", "Remove Items");
-
     // Creating a new "ul" element for the list items that are entered in each stores input field below
     let theList = document.createElement("ul");
     theList.setAttribute("id", "the-list");
@@ -46,7 +41,6 @@ form1.addEventListener('submit', function(e) {
     newForm.appendChild(storeName);
     newForm.appendChild(storeInput);
     newForm.appendChild(submitItem);
-    // newForm.appendChild(remover);
     newForm.appendChild(theList);
 
     // Clearing the input field next to Store Name
@@ -74,14 +68,16 @@ form1.addEventListener('submit', function(e) {
 
         // For loop to go through each item to "check it off the list". Went with color changing because I like the way it looks.
         for (let i = 0; i < eachItem.length; i++){
+            // Single click to change color
             eachItem[i].addEventListener('click', function(){
-                console.log(eachItem[i].innerText);
+                // console.log(eachItem[i].innerText);
                 if (eachItem[i].style.color === 'darkblue'){
                     eachItem[i].style.color = 'pink';
                 } else {
                     eachItem[i].style.color = 'darkblue'
                 }
             })
+            // Double click to remove an item
             eachItem[i].addEventListener('dblclick', function(){
                 eachItem[i].remove();
             })
@@ -89,4 +85,10 @@ form1.addEventListener('submit', function(e) {
     })
 
 });
+
+removeStores.addEventListener('click', function(){
+    let theStores = document.querySelectorAll("ul li");
+    theStores.remove();
+})
+
 

@@ -4,12 +4,12 @@
 }
 
 body {
-    background-color: beige;
+    background-color: lightgoldenrodyellow;
 }
 
 img {
     margin-left: 150px;
-    margin-bottom: -68px;
+    margin-bottom: -122px;
     width: 525px;
 }
 
@@ -17,6 +17,7 @@ img {
     font-family: 'Monoton', cursive;
     font-size: 64px;
     color: blue;
+    margin-bottom: -1px;
 }
 
 #store-label {
@@ -34,22 +35,33 @@ img {
 #store-input {
     background-color: yellow;
     color: darkblue;
+    border-radius: 4px;
 }
 
 #store-submit {
     background-color: aqua;
     color: darkblue;
+    border-radius: 4px;
+}
+
+#remove-btn {
+    margin-left: 125px;
+    background-color: aqua;
+    color: darkblue;
+    border-radius: 4px;
 }
 
 #item-box {
     background-color: yellow;
     color: darkblue;
+    border-radius: 4px;
 }
 
 #sub-btn {
     margin-left: 5px;
     background-color: aqua;
     color: darkblue;
+    border-radius: 4px;
 }
 
 .items {
