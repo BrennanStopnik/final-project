@@ -1,4 +1,3 @@
-
 // Selecting the elements that are already on the HTML page 
 let form1 = document.querySelector("#form1");
 let storesDiv = document.querySelector("#stores");
